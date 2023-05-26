@@ -8,26 +8,32 @@ name = input("이름 : ")
 
 while True:
     age = int(input("나이 : "))
-    if age >= 1 and age <= 199:
+    if 0< age < 200:
         break
     else:
         print("잘못된 값입니다. 다시 입력해주세요.")
 
 while True :
     gender = input("성별 ex)M, F : ")
-    if age == ord('M', 'F') :
+    if gender == 'M' or gender == 'm' or gender == 'F' or gender == 'f' :
         break
     else :
         print("잘못된 값입니다. 다시 입력해주세요.")
 
 while True :
-    job = int(input("직업 입력 1 학생, 2 회사원, 3 주부, 4 무직 : "))
-    if 0 < job and job < 5 :
-        break
-    else :
-        print("잘못된 값입니다. 다시 입력해주세요.")
+    job = input("직업 입력 1 학생, 2 회사원, 3 주부, 4 무직 : ")
+    if job.isdigit() : # 숫자가 값으로 들어왓는지 확인함
+        job = int(job)
+        if 0 < job < 5 : break
+    print ("잘못된 값입니다. 다시 입력해주세요")
 
+if gender == 'M' or gender == 'm' : gender_prn = "남성"
+else : gender_prn = "여성"
+
+job_name = ["", "학생", "회사원", "주부", "무직"]
+
+print("="*5, "회원정보", "="*5)
 print("이름:", name)
 print("나이:", age)
-print("성별:", gender)
-print("직업:", job)
+print("성별:", gender_prn)
+print(f"직업: {job_name[job]}")
