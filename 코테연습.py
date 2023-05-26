@@ -2,6 +2,7 @@
 # result = sum(n)
 # print(f"average : {result / len(n)}")
 
+# 정수 n을 입력 받아 n * n 출력하기
 # n = input("정수 입력 : ")
 # result = int(n) * int(n)
 # print(result)
