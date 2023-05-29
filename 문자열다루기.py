@@ -72,3 +72,4 @@ input_a = """
 studying about str
 """
 print(input_a.strip())
+
